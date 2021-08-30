@@ -1,0 +1,26 @@
+server:
+  port: 9010
+
+zuul:
+  routes:
+    hm-service:
+      path: /hm/**
+      service-id: HM-SERVICE
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 20000
+
+spring:
+  profiles: default
+  application:
+    name: API-GATEWAY
+  cloud:
+    config:
+      uri: http://localhost:9030
+      fail-fast: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:9020/eureka/}
