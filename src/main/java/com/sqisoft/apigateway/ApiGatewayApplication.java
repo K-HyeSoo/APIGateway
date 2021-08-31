@@ -17,7 +17,7 @@ public class ApiGatewayApplication {
     public static void main(String[] args) {
         SpringApplication.run(ApiGatewayApplication.class, args);
         
-        // 주우석
+        // jenkins 자동 빌드 테스트 1
     }
 
     @Bean
